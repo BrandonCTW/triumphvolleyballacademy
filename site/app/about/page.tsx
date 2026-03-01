@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Heart, Target, Users, BookOpen } from "lucide-react";
 
 export default function AboutPage() {
@@ -160,8 +161,25 @@ export default function AboutPage() {
       </section>
 
       {/* About CTA */}
-      <section className="py-20 text-center" style={{ backgroundColor: "#1E2D5C" }}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 text-center overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
+        {/* Background courts photo */}
+        <Image
+          src="/photos/tva-sand-courts.png"
+          alt="TVA sand courts"
+          fill
+          unoptimized
+          className="object-cover object-center"
+          style={{ opacity: 0.18 }}
+        />
+        {/* Dark overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(30,45,92,0.88) 0%, rgba(30,45,92,0.72) 50%, rgba(30,45,92,0.9) 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-black text-white mb-6">
             Join the TVA Family
           </h2>
@@ -169,20 +187,20 @@ export default function AboutPage() {
             Open to all youth athletes in the Central Valley. Come experience volleyball with purpose.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/boys-indoor"
               className="inline-block px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200 hover:scale-105"
               style={{ backgroundColor: "#3DBFB0" }}
             >
               Boys Programs
-            </a>
-            <a
+            </Link>
+            <Link
               href="/girls-indoor"
               className="inline-block px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 border-2 hover:bg-white/10"
               style={{ color: "#ffffff", borderColor: "rgba(255,255,255,0.4)" }}
             >
               Girls Programs
-            </a>
+            </Link>
           </div>
         </div>
       </section>
