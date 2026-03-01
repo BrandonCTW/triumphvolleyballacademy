@@ -10,9 +10,29 @@ export default function Home() {
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{ backgroundColor: "#1E2D5C" }}
       >
-        {/* Background overlay pattern */}
+        {/* Background action photo */}
+        <Image
+          src="/photos/TVA-boys-action.png"
+          alt="TVA athletes in action"
+          fill
+          unoptimized
+          priority
+          className="object-cover object-center"
+          style={{ opacity: 0.25 }}
+        />
+
+        {/* Background overlay gradient */}
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(30,45,92,0.6) 0%, rgba(30,45,92,0.75) 60%, rgba(30,45,92,0.95) 100%)",
+          }}
+        />
+
+        {/* Subtle color accents */}
+        <div
+          className="absolute inset-0 opacity-20"
           style={{
             backgroundImage:
               "radial-gradient(circle at 20% 50%, #3DBFB0 0%, transparent 50%), radial-gradient(circle at 80% 20%, #F4A07A 0%, transparent 40%)",
