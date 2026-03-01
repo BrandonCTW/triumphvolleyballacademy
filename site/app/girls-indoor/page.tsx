@@ -188,8 +188,25 @@ export default function GirlsIndoorPage() {
       </section>
 
       {/* Faith quote CTA */}
-      <section className="py-20 text-center" style={{ backgroundColor: "#1E2D5C" }}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 text-center overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
+        {/* Background team photo */}
+        <Image
+          src="/photos/girls-team.png"
+          alt="TVA girls team"
+          fill
+          unoptimized
+          className="object-cover object-center"
+          style={{ opacity: 0.18 }}
+        />
+        {/* Dark gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(30,45,92,0.88) 0%, rgba(30,45,92,0.72) 50%, rgba(30,45,92,0.9) 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <blockquote className="text-2xl md:text-3xl font-bold italic text-white mb-4">
             "Whatever you do, do it all for the glory of God."
           </blockquote>
