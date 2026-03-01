@@ -251,6 +251,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Beach Academy Feature */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Background photo */}
+        <Image
+          src="/photos/sand-beach-academy-2025.webp"
+          alt="TVA Beach Academy 2025"
+          fill
+          unoptimized
+          className="object-cover object-center"
+          style={{ opacity: 0.35 }}
+        />
+        {/* Dark overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(30,45,92,0.92) 0%, rgba(30,45,92,0.75) 50%, rgba(244,160,122,0.4) 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6" style={{ backgroundColor: "rgba(244,160,122,0.25)", color: "#F4A07A" }}>
+              <span>☀</span>
+              Summer 2025
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
+              TVA Beach Academy
+              <br />
+              <span style={{ color: "#F4A07A" }}>2025</span>
+            </h2>
+            <p className="text-xl mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>
+              May 27 - July 17 - Tuesdays and Thursdays
+            </p>
+            <p className="text-lg mb-8 leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Boys and girls programs available. Sand training in a faith-centered environment. Spots are limited - register early.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdMfh_o_ZMGGGuGrCp2Pe6xgjgshrWBiyJ6xAZR3MgB3VAGPA/viewform?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "#F4A07A" }}
+              >
+                Register Now
+                <ArrowRight size={20} />
+              </a>
+              <Link
+                href="/sand"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 border-2 hover:bg-white/10"
+                style={{ color: "#ffffff", borderColor: "rgba(255,255,255,0.4)" }}
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sponsors Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
