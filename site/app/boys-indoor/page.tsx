@@ -28,6 +28,23 @@ export default function BoysIndoorPage() {
     <div>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
+        {/* Background team photo */}
+        <Image
+          src="/photos/boys-recent.webp"
+          alt="TVA boys team"
+          fill
+          unoptimized
+          className="object-cover object-center"
+          style={{ opacity: 0.2 }}
+        />
+        {/* Dark gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(30,45,92,0.88) 0%, rgba(30,45,92,0.72) 50%, rgba(30,45,92,0.9) 100%)",
+          }}
+        />
         <div
           className="absolute inset-0 opacity-10"
           style={{
