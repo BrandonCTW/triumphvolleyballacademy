@@ -311,21 +311,46 @@ export default function Home() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider mb-8" style={{ color: "#9ca3af" }}>
-            Official Uniform Partner
-          </p>
-          <a
-            href="https://www.smacksportswear.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl border-2 font-bold text-lg transition-all duration-200 hover:shadow-lg"
-            style={{ borderColor: "#3DBFB0", color: "#1E2D5C" }}
-          >
-            SMACK Sportswear
-            <ArrowRight size={18} style={{ color: "#3DBFB0" }} />
-          </a>
+      <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <div className="w-12 h-1 mx-auto rounded-full" style={{ backgroundColor: "#3DBFB0" }} />
+            </div>
+            <h2 className="text-3xl font-black" style={{ color: "#1E2D5C" }}>Official Partners</h2>
+            <p className="text-base mt-2" style={{ color: "#9ca3af" }}>
+              Proud to partner with organizations that share our commitment to excellence.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <a
+              href="https://www.smacksportswear.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-white rounded-2xl p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full max-w-sm text-center"
+              style={{ borderTop: "4px solid #3DBFB0" }}
+            >
+              <div
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 mx-auto"
+                style={{ backgroundColor: "rgba(61,191,176,0.12)" }}
+              >
+                <Star size={26} style={{ color: "#3DBFB0" }} />
+              </div>
+              <h3 className="text-2xl font-black mb-1" style={{ color: "#1E2D5C" }}>
+                SMACK Sportswear
+              </h3>
+              <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: "#9ca3af" }}>
+                Official Uniform Partner
+              </p>
+              <span
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white transition-all duration-200 group-hover:scale-105"
+                style={{ backgroundColor: "#3DBFB0" }}
+              >
+                Visit Site <ArrowRight size={14} />
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
