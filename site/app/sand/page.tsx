@@ -15,11 +15,22 @@ export default function SandPage() {
     <div>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
+        {/* Background beach photo */}
+        <Image
+          src="/photos/TVA-in-sand.jpeg"
+          alt="TVA athletes on the sand court"
+          fill
+          unoptimized
+          priority
+          className="object-cover object-center"
+          style={{ opacity: 0.2 }}
+        />
+        {/* Dark overlay gradient */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0"
           style={{
-            backgroundImage:
-              "radial-gradient(circle at 60% 40%, #F4A07A 0%, transparent 50%), radial-gradient(circle at 20% 70%, #3DBFB0 0%, transparent 40%)",
+            background:
+              "linear-gradient(135deg, rgba(30,45,92,0.90) 0%, rgba(30,45,92,0.70) 50%, rgba(30,45,92,0.88) 100%)",
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
