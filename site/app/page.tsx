@@ -16,6 +16,7 @@ export default function Home() {
           alt="TVA athletes playing at the sand courts"
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center"
           style={{ opacity: 0.45 }}
         />
