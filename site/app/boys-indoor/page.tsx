@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Trophy, Users, ArrowRight } from "lucide-react";
+import { ExternalLink, Mail, Trophy, Users, ArrowRight } from "lucide-react";
 
 export default function BoysIndoorPage() {
   const importantLinks = [
@@ -11,17 +11,38 @@ export default function BoysIndoorPage() {
       color: "#3DBFB0",
     },
     {
+      title: "AAU Membership",
+      description: "AAU membership may be required depending on the events TVA competes in. Register through the official AAU site.",
+      href: "https://aausports.org/membership/",
+      color: "#1E2D5C",
+    },
+    {
       title: "NCVA Power League Info",
       description: "The Power League is Northern California's primary boys junior circuit. TVA competes here throughout the season.",
       href: "https://ncva.com/boys-division/",
-      color: "#1E2D5C",
+      color: "#F4A07A",
     },
     {
       title: "Heat League Information",
       description: "The Fresno Heat League runs locally and gives TVA boys extra match reps over the course of the year.",
       href: "https://fresnoheat.com/boys-heat-league",
-      color: "#F4A07A",
+      color: "#3DBFB0",
     },
+  ];
+
+  const alumniPhotos = [
+    "/photos/alumni-1.jpg",
+    "/photos/alumni-2.jpg",
+    "/photos/alumni-3.jpg",
+    "/photos/alumni-4.jpg",
+    "/photos/alumni-5.jpg",
+    "/photos/alumni-6.jpg",
+    "/photos/alumni-7.jpg",
+    "/photos/alumni-8.jpg",
+    "/photos/alumni-9.jpg",
+    "/photos/alumni-10.jpg",
+    "/photos/alumni-11.jpg",
+    "/photos/alumni-12.jpg",
   ];
 
   return (
@@ -62,7 +83,7 @@ export default function BoysIndoorPage() {
               <p className="text-xl leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
                 Competitive club volleyball for boys in the Central Valley. NCVA Power League competition, Fresno Heat League, and coaches who take both the game and the faith seriously.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: "rgba(61,191,176,0.2)", color: "#3DBFB0" }}>
                   NCVA Power League
                 </span>
@@ -73,12 +94,20 @@ export default function BoysIndoorPage() {
                   Faith-Based Training
                 </span>
               </div>
+              <a
+                href="mailto:coachgugtva@gmail.com"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105"
+                style={{ backgroundColor: "#3DBFB0", color: "#1E2D5C" }}
+              >
+                <Mail size={18} />
+                Contact Now
+              </a>
             </div>
             <div className="relative">
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-30" style={{ backgroundColor: "#3DBFB0" }} />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/photos/boys-team-fullsize.webp"
+                  src="/photos/boys-new-1.jpg"
                   alt="TVA Boys Indoor team"
                   width={600}
                   height={450}
@@ -127,23 +156,29 @@ export default function BoysIndoorPage() {
           </div>
 
           {/* Team Photos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            <div className="rounded-2xl overflow-hidden shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
               <Image
-                src="/photos/boys-team.png"
-                alt="Boys team group photo"
-                width={600}
-                height={400}
-                className="w-full h-auto"
+                src="/photos/boys-new-2.jpg"
+                alt="Boys team"
+                fill
+                className="object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
               <Image
-                src="/photos/boys-recent.webp"
-                alt="Recent boys team photo"
-                width={600}
-                height={400}
-                className="w-full h-auto"
+                src="/photos/boys-new-3.jpg"
+                alt="Boys team"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
+              <Image
+                src="/photos/boys-new-4.jpg"
+                alt="Boys team"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
@@ -162,7 +197,7 @@ export default function BoysIndoorPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {importantLinks.map((link) => (
               <a
                 key={link.title}
@@ -178,7 +213,7 @@ export default function BoysIndoorPage() {
                 >
                   <ExternalLink size={22} color="white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "#1E2D5C" }}>
+                <h3 className="text-lg font-bold mb-3" style={{ color: "#1E2D5C" }}>
                   {link.title}
                 </h3>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
@@ -196,35 +231,30 @@ export default function BoysIndoorPage() {
         </div>
       </section>
 
-      {/* Club Achievements */}
+      {/* Alumni */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-4">
             <Trophy size={36} style={{ color: "#3DBFB0" }} />
             <h2 className="text-4xl font-black" style={{ color: "#1E2D5C" }}>
-              Club Achievements
+              Alumni
             </h2>
           </div>
+          <p className="text-lg mb-12" style={{ color: "#6b7280" }}>
+            30+ TVA athletes have gone on to play at the collegiate level. This is what the mission looks like years later.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/photos/boys-achievement-1.png"
-                alt="Boys club achievement"
-                width={700}
-                height={500}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/photos/boys-achievement-2.png"
-                alt="Boys club achievement"
-                width={700}
-                height={500}
-                className="w-full h-auto"
-              />
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {alumniPhotos.map((src, i) => (
+              <div key={i} className="rounded-xl overflow-hidden shadow-md aspect-square relative">
+                <Image
+                  src={src}
+                  alt={`TVA alumni ${i + 1}`}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -248,19 +278,32 @@ export default function BoysIndoorPage() {
           }}
         />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-black text-white mb-4">Ready to Join?</h2>
+          <h2 className="text-4xl font-black text-white mb-4">Contact Now</h2>
           <p className="text-lg mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
-            NCVA registration is required before your son can compete with TVA. Handle that first. Everything else follows.
+            Questions about the Boys Indoor program? Reach out directly to our director.
           </p>
-          <a
-            href="https://ncva.com/info/registration/login/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200 hover:scale-105"
-            style={{ backgroundColor: "#3DBFB0" }}
-          >
-            Register with NCVA <ExternalLink size={18} />
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:coachgugtva@gmail.com"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105"
+              style={{ backgroundColor: "#3DBFB0", color: "#1E2D5C" }}
+            >
+              <Mail size={20} />
+              coachgugtva@gmail.com
+            </a>
+            <a
+              href="https://ncva.com/info/registration/login/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 border-2 hover:bg-white/10"
+              style={{ color: "#ffffff", borderColor: "rgba(255,255,255,0.4)" }}
+            >
+              Register with NCVA <ExternalLink size={18} />
+            </a>
+          </div>
+          <p className="mt-4 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
+            Director: coachgugtva@gmail.com
+          </p>
         </div>
       </section>
     </div>
