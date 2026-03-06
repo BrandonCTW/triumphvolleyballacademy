@@ -1,21 +1,60 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Trophy, Users, Heart } from "lucide-react";
+import { ExternalLink, Mail, Trophy, Users, ArrowRight } from "lucide-react";
 
 export default function GirlsIndoorPage() {
+  const importantLinks = [
+    {
+      title: "NCVA Membership",
+      description: "NCVA membership is required before competitive play begins. If your daughter is joining TVA Girls Indoor, this is the first step.",
+      href: "https://ncva.com/info/registration/login/",
+      color: "#F4A07A",
+    },
+    {
+      title: "AAU Membership",
+      description: "AAU membership may be required depending on the events TVA competes in. Register through the official AAU site.",
+      href: "https://aausports.org/membership/",
+      color: "#1E2D5C",
+    },
+    {
+      title: "NCVA Girls Division",
+      description: "Information about the NCVA Girls Division, Power League, Premier League, and season structure.",
+      href: "https://ncva.com/girls-division/",
+      color: "#3DBFB0",
+    },
+    {
+      title: "NCVA Girls Power League",
+      description: "The Power League is NCVA's elite girls junior circuit. TVA Girls competes at this level throughout the season.",
+      href: "https://ncva.com/girls/powerleague/",
+      color: "#F4A07A",
+    },
+  ];
+
+  const alumniPhotos = [
+    "/photos/alumni-1.jpg",
+    "/photos/alumni-2.jpg",
+    "/photos/alumni-3.jpg",
+    "/photos/alumni-4.jpg",
+    "/photos/alumni-5.jpg",
+    "/photos/alumni-6.jpg",
+    "/photos/alumni-7.jpg",
+    "/photos/alumni-8.jpg",
+    "/photos/alumni-9.jpg",
+    "/photos/alumni-10.jpg",
+    "/photos/alumni-11.jpg",
+    "/photos/alumni-12.jpg",
+  ];
+
   return (
     <div>
       {/* Hero */}
       <section className="relative py-24 overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
-        {/* Background team photo */}
         <Image
-          src="/photos/girls-indoor-action.jpg"
+          src="/photos/girls-hero.jpg"
           alt="TVA girls indoor volleyball"
           fill
           className="object-cover object-top"
-          style={{ opacity: 0.28 }}
+          style={{ opacity: 0.32 }}
         />
-        {/* Dark gradient overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -41,23 +80,31 @@ export default function GirlsIndoorPage() {
               <p className="text-xl leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
                 Competitive indoor volleyball for girls in the Central Valley. The standard is high. The community sticks around.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: "rgba(61,191,176,0.2)", color: "#3DBFB0" }}>
                   Competitive Training
                 </span>
                 <span className="px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: "rgba(61,191,176,0.2)", color: "#3DBFB0" }}>
-                  Club Achievements
+                  30+ Collegiate Alumni
                 </span>
                 <span className="px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: "rgba(61,191,176,0.2)", color: "#3DBFB0" }}>
                   Faith-Based Culture
                 </span>
               </div>
+              <a
+                href="mailto:coachwoldtva@gmail.com"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105"
+                style={{ backgroundColor: "#3DBFB0", color: "#1E2D5C" }}
+              >
+                <Mail size={18} />
+                Contact Now
+              </a>
             </div>
             <div className="relative">
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-30" style={{ backgroundColor: "#F4A07A" }} />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/photos/girls-indoor-action.jpg"
+                  src="/photos/girls-new-1.jpg"
                   alt="TVA Girls Indoor volleyball"
                   width={600}
                   height={450}
@@ -105,77 +152,104 @@ export default function GirlsIndoorPage() {
             </div>
           </div>
 
-          {/* Team Photo and Flyer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            <div className="rounded-2xl overflow-hidden shadow-md">
+          {/* Team Photos */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
               <Image
-                src="/photos/girls-team.png"
-                alt="Girls team group photo"
-                width={600}
-                height={400}
-                className="w-full h-auto"
+                src="/photos/girls-new-2.jpg"
+                alt="Girls team"
+                fill
+                className="object-cover object-top"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
               <Image
-                src="/photos/girls-flyer.png"
-                alt="Girls program flyer"
-                width={600}
-                height={400}
-                className="w-full h-auto"
+                src="/photos/girls-hero.jpg"
+                alt="Girls team"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3] relative">
+              <Image
+                src="/photos/tva-girls-courts.jpg"
+                alt="Girls at courts"
+                fill
+                className="object-cover object-center"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Club Achievements */}
+      {/* Important Links */}
       <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-12">
-            <Trophy size={36} style={{ color: "#F4A07A" }} />
-            <h2 className="text-4xl font-black" style={{ color: "#1E2D5C" }}>
-              Club Achievements
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-black mb-4" style={{ color: "#1E2D5C" }}>
+              Important Links
             </h2>
+            <p className="text-lg" style={{ color: "#6b7280" }}>
+              Here is where to go once you are ready to join TVA Girls Indoor.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Trophy size={28} color="white" />,
-                color: "#3DBFB0",
-                title: "Competitive Excellence",
-                description:
-                  "TVA Girls Indoor competes at a serious level. Athletes from this program have gone on to play high school and collegiate volleyball, and they leave better equipped for life beyond the sport.",
-              },
-              {
-                icon: <Heart size={28} color="white" />,
-                color: "#F4A07A",
-                title: "Character Development",
-                description:
-                  "A win matters. So does how you got there. At TVA, faith, integrity, and leadership are not sidebars - they are built into how the program runs.",
-              },
-              {
-                icon: <Users size={28} color="white" />,
-                color: "#1E2D5C",
-                title: "Team Community",
-                description:
-                  "The families who come through TVA tend to stay connected long after the season ends. What gets built here is real, and that does not go away when the court lights turn off.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{ borderTop: `4px solid ${item.color}` }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {importantLinks.map((link) => (
+              <a
+                key={link.title}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                style={{ borderTop: `4px solid ${link.color}` }}
+              >
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: item.color }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: link.color }}
                 >
-                  {item.icon}
+                  <ExternalLink size={22} color="white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "#1E2D5C" }}>
-                  {item.title}
+                <h3 className="text-lg font-bold mb-3" style={{ color: "#1E2D5C" }}>
+                  {link.title}
                 </h3>
-                <p className="leading-relaxed" style={{ color: "#6b7280" }}>
-                  {item.description}
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
+                  {link.description}
                 </p>
+                <span
+                  className="inline-flex items-center gap-1 text-sm font-semibold transition-colors group-hover:gap-2"
+                  style={{ color: link.color }}
+                >
+                  Visit Site <ArrowRight size={14} />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Alumni */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-4">
+            <Trophy size={36} style={{ color: "#F4A07A" }} />
+            <h2 className="text-4xl font-black" style={{ color: "#1E2D5C" }}>
+              Alumni
+            </h2>
+          </div>
+          <p className="text-lg mb-12" style={{ color: "#6b7280" }}>
+            30+ TVA athletes have gone on to play at the collegiate level. This is what the mission looks like years later.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {alumniPhotos.map((src, i) => (
+              <div key={i} className="rounded-xl overflow-hidden shadow-md aspect-square relative">
+                <Image
+                  src={src}
+                  alt={`TVA alumni ${i + 1}`}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             ))}
           </div>
@@ -183,16 +257,14 @@ export default function GirlsIndoorPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 text-center overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
-        {/* Background team photo */}
+      <section className="relative py-16 text-center overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
         <Image
-          src="/photos/girls-indoor-action.jpg"
+          src="/photos/girls-hero.jpg"
           alt="TVA girls indoor volleyball"
           fill
           className="object-cover object-top"
-          style={{ opacity: 0.28 }}
+          style={{ opacity: 0.22 }}
         />
-        {/* Dark gradient overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -201,32 +273,23 @@ export default function GirlsIndoorPage() {
           }}
         />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-black text-white mb-4">Your Next Step at TVA</h2>
+          <h2 className="text-4xl font-black text-white mb-4">Contact Now</h2>
           <p className="text-lg mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
-            Girls Indoor runs through the competitive season. Beach Academy opens every summer for girls who want to stay on the court. Same coaches. Same faith. Two different courts.
-          </p>
-          <blockquote className="text-xl font-bold italic mb-2" style={{ color: "rgba(255,255,255,0.65)" }}>
-            &ldquo;Whatever you do, do it all for the glory of God.&rdquo;
-          </blockquote>
-          <p className="text-sm mb-10" style={{ color: "#3DBFB0" }}>
-            1 Corinthians 10:31
+            Questions about the Girls Indoor program? Reach out directly to our director.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/sand"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-200 hover:scale-105"
-              style={{ backgroundColor: "#3DBFB0" }}
+            <a
+              href="mailto:coachwoldtva@gmail.com"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105"
+              style={{ backgroundColor: "#3DBFB0", color: "#1E2D5C" }}
             >
-              Explore Sand Volleyball <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="/about"
-              className="inline-block px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 border-2 hover:bg-white/10"
-              style={{ color: "#ffffff", borderColor: "rgba(255,255,255,0.4)" }}
-            >
-              About TVA
-            </Link>
+              <Mail size={20} />
+              coachwoldtva@gmail.com
+            </a>
           </div>
+          <p className="mt-4 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
+            Girls Director: coachwoldtva@gmail.com
+          </p>
         </div>
       </section>
     </div>

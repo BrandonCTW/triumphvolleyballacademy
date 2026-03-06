@@ -1,14 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock, DollarSign, Sun } from "lucide-react";
-
-const schedule2025 = [
-  { division: "13-16 Girls", time: "6:00 - 8:00pm", price: "$550" },
-  { division: "17-18 Girls", time: "6:00 - 8:00pm", price: "$550" },
-  { division: "11-16 Boys", time: "6:00 - 7:30pm", price: "$450" },
-  { division: "17-18 Boys", time: "6:00 - 7:30pm", price: "$450" },
-  { division: "10-13 Girls and Boys", time: "6:00 - 7:30pm", price: "$450" },
-];
+import { ArrowRight, Calendar, Sun } from "lucide-react";
 
 export default function SandPage() {
   return (
@@ -37,15 +29,13 @@ export default function SandPage() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-4 leading-tight">
             TVA Beach Academy
-            <br />
-            <span style={{ color: "#3DBFB0" }}>2026</span>
           </h1>
           <p className="text-xl leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.8)" }}>
-            Beach Academy comes back every summer. Last season ran May 27 through July 17 with five age groups on the sand. 2026 dates and pricing are on their way.
+            Beach Academy returns every summer for boys and girls. Same coaches. Same faith. On the sand.
           </p>
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl" style={{ backgroundColor: "rgba(61,191,176,0.15)", border: "1px solid rgba(61,191,176,0.3)" }}>
             <Calendar size={20} style={{ color: "#3DBFB0" }} />
-            <span className="text-white font-semibold">2026 Registration Opening Soon</span>
+            <span className="text-white font-semibold">Registration Coming Soon</span>
           </div>
         </div>
       </section>
@@ -57,8 +47,8 @@ export default function SandPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/photos/TVA-in-sand.jpeg"
-                  alt="TVA in sand volleyball"
+                  src="/photos/beach-new-1.jpg"
+                  alt="TVA sand volleyball"
                   width={600}
                   height={450}
                   className="w-full h-auto"
@@ -89,55 +79,10 @@ export default function SandPage() {
         </div>
       </section>
 
-      {/* 2025 Reference */}
-      <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "rgba(107,114,128,0.12)", color: "#6b7280" }}>
-              <DollarSign size={14} />
-              2025 Season - For Reference
-            </div>
-            <h2 className="text-2xl font-bold mb-2" style={{ color: "#6b7280" }}>
-              Past Season Pricing
-            </h2>
-            <p className="text-sm" style={{ color: "#9ca3af" }}>
-              The details below are from Summer 2025. 2026 information will be announced soon.
-            </p>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden border opacity-70" style={{ borderColor: "#e5e7eb" }}>
-            <div className="grid grid-cols-3 px-6 py-4 text-sm font-bold uppercase tracking-wider" style={{ backgroundColor: "#6b7280", color: "white" }}>
-              <span>Division</span>
-              <span className="text-center">Time</span>
-              <span className="text-right">2025 Price</span>
-            </div>
-            {schedule2025.map((row, i) => (
-              <div
-                key={row.division}
-                className="grid grid-cols-3 px-6 py-4 items-center border-b last:border-b-0"
-                style={{ borderColor: "#f3f4f6", backgroundColor: i % 2 === 0 ? "white" : "#fafafa" }}
-              >
-                <span className="font-medium text-sm" style={{ color: "#6b7280" }}>{row.division}</span>
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: "rgba(107,114,128,0.1)", color: "#6b7280" }}>
-                    <Clock size={11} />
-                    {row.time}
-                  </div>
-                </div>
-                <span className="text-right text-lg font-bold" style={{ color: "#9ca3af" }}>{row.price}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs mt-4" style={{ color: "#9ca3af" }}>
-            Sessions ran Tuesday and Thursday, May 27 - July 17, 2025.
-          </p>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-16 text-center overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
         <Image
-          src="/photos/tva-sand-courts-action.jpg"
+          src="/photos/beach-new-2.jpg"
           alt="TVA sand courts"
           fill
           className="object-cover object-center"
@@ -153,7 +98,7 @@ export default function SandPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-black text-white mb-4">Volleyball Doesn&apos;t Stop in Summer</h2>
           <p className="text-lg mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
-            Beach Academy runs May through July. The rest of the year, TVA Boys and Girls Indoor programs train through the competitive season. Same coaches. Same mission.
+            Beach Academy runs each summer. The rest of the year, TVA Boys and Girls Indoor programs train through the competitive season. Same coaches. Same mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
