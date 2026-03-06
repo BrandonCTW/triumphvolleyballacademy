@@ -131,30 +131,17 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
             &copy; 2022-2026 Triumph Volleyball Academy. All Rights Reserved.
           </p>
-          <div className="flex flex-col items-end gap-1">
-            <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Uniforms by{" "}
-              <a
-                href="https://www.smacksportswear.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-colors hover:text-white/70"
-              >
-                SMACK Sportswear
-              </a>
-            </p>
-            <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Website by{" "}
-              <a
-                href="https://www.caltechweb.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-colors hover:text-white/70"
-              >
-                CalTech Web
-              </a>
-            </p>
-          </div>
+          <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
+            Website by{" "}
+            <a
+              href="https://www.caltechweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline transition-colors hover:text-white/70"
+            >
+              CalTech Web
+            </a>
+          </p>
         </div>
       </div>
     </footer>
