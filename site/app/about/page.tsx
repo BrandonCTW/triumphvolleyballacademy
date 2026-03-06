@@ -9,11 +9,11 @@ export default function AboutPage() {
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: "#1E2D5C" }}>
         {/* Background team photo */}
         <Image
-          src="/photos/boys-team.png"
+          src="/photos/tva-fca-camp-group-2023.webp"
           alt="TVA team"
           fill
           className="object-cover object-center"
-          style={{ opacity: 0.18 }}
+          style={{ opacity: 0.28 }}
         />
         {/* Dark gradient overlay */}
         <div
@@ -103,8 +103,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Faith Values */}
+      {/* Founders Section */}
       <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "rgba(61,191,176,0.15)", color: "#0B7065" }}>
+              Our Founders
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black" style={{ color: "#1E2D5C" }}>
+              Steve &amp; Danene
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/photos/founders.jpg"
+                alt="Steve and Danene - Founders of Triumph Volleyball Academy"
+                width={700}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-lg leading-relaxed mb-6" style={{ color: "#374151" }}>
+                Steve and Danene founded Triumph Volleyball Academy in 2011 with a clear purpose - to use the platform of sport to impact young athletes for Jesus Christ.
+              </p>
+              <p className="text-lg leading-relaxed mb-6" style={{ color: "#374151" }}>
+                What started as a vision for faith-based competitive volleyball in the Central Valley has grown into a program with boys indoor, girls indoor, and sand teams - and over 30 collegiate alumni who carried what they learned here into the next chapter of their lives.
+              </p>
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: "#1E2D5C" }}>
+                <p className="text-lg font-semibold italic text-white mb-2">
+                  &ldquo;The sport is the platform. The mission is bigger.&rdquo;
+                </p>
+                <p className="text-sm font-bold" style={{ color: "#3DBFB0" }}>
+                  - TVA Founders
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Faith Values */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1E2D5C" }}>
